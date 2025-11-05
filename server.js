@@ -34,6 +34,11 @@ app.use(bodyParser.json());
 // Use routes as a module (see index.js)
 require('./routes')(app, router);
 
+//This is the default route for now
+app.get('/', (req, res) => {
+  res.json({ message: "Llama.io API is running", data: null });
+});
+
 // Start the server
 app.listen(port);
 console.log('Server running on port ' + port);
