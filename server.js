@@ -32,11 +32,11 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Use routes as a module (see index.js)
-require('./routes')(app, router);
+require('./routes')(app);
 
 //This is the default route for now
 app.get('/', (req, res) => {
-  res.json({ message: "Llama.io API is running", data: null });
+  res.json({ message: "This is the default route for now", data: null });
 });
 
 // Start the server
